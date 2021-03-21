@@ -12,6 +12,7 @@ const Home = () => {
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
           <input type="checkbox" name="" id=""/>
+          <button>Click</button>
         </ul>
       </div>
       <div class="container">container</div>
