@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+  font-size: 1.5rem;
+  /* background: burlywood; */
+}
+.main .container {
+  position: relative;
+}
+.v-item-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+  /*  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-row-gap: 10px;
+  grid-column-gap: 25px; */
+}
+.v-img-group {
+  /* border: 2px solid black; */
+  position: relative;
+}
+#heart {
+  position: absolute;
+  right: 13px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+  z-index: 5;
+  opacity: 0;
+  /*  display: none; */
+}
+#heart + label {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: url("../../assets/wheart.png") no-repeat;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  padding: 0x;
+  /* border: 2px solid black; */
+}
+#heart:checked + label {
+  background: url("../../assets/rheart.png") no-repeat;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  padding: 0 0 0 0px;
+}
+/* .heart {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-image: url("../../assets/wheart.png");
+} */
+.v-item-list {
+  list-style: none;
+}
+
+.vido {
+  width: 230px;
+  height: 160px;
+}

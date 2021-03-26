@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Checkbox</title>
+    <style>
+      #heart {
+        display: none;
+      }
+      label {
+        background: url("./wheart.png") no-repeat;
+        height: 36px;
+        width: 36px;
+        margin: 50px;
+        display: inline-block;
+        padding: 10px;
+        border: 2px solid black;
+      }
+
+      #heart:checked + label {
+        background: url("./rheart.png") no-repeat;
+        height: 56px;
+        width: 56px;
+        display: inline-block;
+        padding: 0 0 0 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p><input type="checkbox" id="heart" /><label for="heart"></label></p>
+  </body>
+</html>

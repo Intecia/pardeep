@@ -1,7 +1,6 @@
 import React from 'react'
 import "./uppersection.css"
 const Uppersection = ({DataJson,name,searchInput,handleClick}) => {
-   
     return (
         <section className="showcase">
         <div className="container">

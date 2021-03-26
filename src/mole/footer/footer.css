@@ -1,53 +1,51 @@
-.main-section{
-    height: 1000px;
+.main-section {
+  height: 1000px;
 }
 
-.hr-line{
-    margin-bottom: 150px;
+.footer-hr-line {
+  margin-bottom: 150px;
 }
-.footer-container{
-    width: 1600px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
+.footer-container {
+  width: 1600px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
-.heading{
-    font-family:  "Crimson Text", serif;
-    
+.heading {
+  font-family: "Crimson Text", serif;
 }
-.heading-sa a{
-text-decoration: none;
-font-size: 18px;
-color: black;
-margin-bottom: 10px;
+.heading-sa a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  margin-bottom: 10px;
 }
-.info-sa a{
-    text-decoration: none;
-    font-size: 14px;
-    color: rgb(102, 102, 102);;
+.info-sa a {
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(102, 102, 102);
 }
 
-.mini-footer{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 100px;
+.mini-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
-.brand{
-    font-weight: bold;
-    font-size: 20px;
+.brand {
+  font-weight: bold;
+  font-size: 20px;
 }
-.icon-list{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    
+.icon-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
-.icon1{
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    padding: 10px;
-    color: red;
-    opacity: 0.4;
+.icon1 {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  padding: 10px;
+  color: red;
+  opacity: 0.4;
 }

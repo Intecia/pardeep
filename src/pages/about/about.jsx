@@ -1,6 +1,6 @@
 import React from 'react'
 import Uppersection from '../../mole/uppersection/uppersection'
-import { DataJson } from "../photos/dataj";
+import { DataJson } from "../home/dataj";
 
 const About = () => {
     return (

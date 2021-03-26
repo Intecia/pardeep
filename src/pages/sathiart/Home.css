@@ -1,0 +1,99 @@
+* {
+  padding: 0px;
+  margin: px;
+}
+.main-container {
+  width: 950px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: auto;
+  /* background: cornflowerblue; */
+  padding: 10px;
+  margin-top: 100px;
+}
+.card {
+  /* background: rgb(238, 131, 197); */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  grid-template-areas:
+    "repo repo"
+    "hr-main-line hr-main-line"
+    "dept year"
+    "title title"
+    "term term"
+    "url url"
+    "wiki wiki"
+    "creditline creditline";
+  padding: 20px;
+}
+
+.itm {
+  padding: 5px;
+  margin: 5px;
+  font-size: 20px;
+}
+.hr-main-line {
+  grid-area: hr-main-line;
+  height: 3px;
+  width: 100%;
+  opacity: 0.3;
+  background: black;
+}
+.repo {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px;
+  grid-area: repo;
+  /* background: rgb(173, 185, 207); */
+}
+.department {
+  grid-area: dept;
+  /*  background: cornsilk; */
+  text-align: center;
+  margin-right: auto;
+}
+.title {
+  text-align: center;
+  font-weight: bold;
+  grid-area: title;
+  border: 2px solid black;
+  opacity: 0.8;
+  border-radius: 10px;
+  padding: 10px;
+  /*  background: cyan; */
+}
+.term {
+  grid-area: term;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid blueviolet;
+  /* background: chocolate; */
+  margin-right: auto;
+}
+.url {
+  grid-area: url;
+  margin-right: auto;
+  border-bottom: 1px solid blueviolet;
+  /* background: darkgrey; */
+  padding: 5px;
+}
+.wiki {
+  grid-area: wiki;
+  margin-right: auto;
+  border-bottom: 1px solid blueviolet;
+  /* background: rgb(203, 236, 12); */
+}
+.year {
+  grid-area: year;
+  text-align: center;
+  /* background: rgb(145, 156, 134); */
+}
+.creditLine {
+  grid-area: creditline;
+  /* background: brown; */
+  margin-left: auto;
+  opacity: 0.6;
+}

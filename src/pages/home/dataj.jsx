@@ -1,6 +1,6 @@
 export const DataJson = {
 logo:'Photo Play',
-heading:'Discover the world betst photo and videos',
+heading:'Discover the world best photo and videos',
 desc:'Best memoroies online',
 photos:[
    
