@@ -40,7 +40,7 @@ const BottomsectionVideos = ({videosAPI}) => {
                     <div  className="v-img-group"  key={items.id}>
                     <img src={items.link} width="230px" height="160px"></img>
                      {<div><input type="checkbox" id="heart" value={image} onClick={(e)=>{changeImage(e)}}></input><label for="heart"></label></div>} 
-                     {/* {image?<div><img src={wheart} key={i} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for="heart"></label></div>:<div><img src={rheart} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for='heart'></label></div>}  */}
+                     {/* {image?<div><img src={wheart} key={i} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for="heart"></label></div>:<div><img src={rheart} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for='heart'></label></div>} */}
                     </div>
                   </li>)}
               )}

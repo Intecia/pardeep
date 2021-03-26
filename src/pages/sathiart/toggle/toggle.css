@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.toggle-container {
+  width: 1000px;
+  margin: auto;
+  border: 2px solid black;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.list-ul {
+  list-style: none;
+}
+.list-li {
+  padding: 5px;
+}
+.t-heading {
+  margin-bottom: 10px;
+  border: 1px solid blue;
+  font-weight: bold;
+}

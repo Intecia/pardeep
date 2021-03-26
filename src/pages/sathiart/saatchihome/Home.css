@@ -39,7 +39,8 @@
   height: 3px;
   width: 100%;
   opacity: 0.3;
-  background: black;
+  background: rgb(2, 0, 0);
+  z-index: -1;
 }
 .repo {
   text-align: center;
@@ -63,7 +64,8 @@
   opacity: 0.8;
   border-radius: 10px;
   padding: 10px;
-  /*  background: cyan; */
+  background: cyan;
+  z-index: -1;
 }
 .term {
   grid-area: term;

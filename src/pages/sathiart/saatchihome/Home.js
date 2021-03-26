@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
-import Footer from "../../mole/footer/Footer";
-import Navbar from "../../mole/navbar/Navbar";
+import Footer from "../../../mole/footer/Footer";
+import Navbar from "../saatchinavbar/Navbar";
 import axios from "axios";
 import "./Home.css";
 function Home() {

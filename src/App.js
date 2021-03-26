@@ -1,6 +1,7 @@
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import './App.css';
-import Home from './pages/sathiart/Home'
+import Toggle from './pages/sathiart/toggle/Toggle'
+ import Home from './pages/sathiart/saatchihome/Home' 
 import hom from './pages/home/Home'
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
 <Router>
   <Switch>
     {/* <Route exact path='/' component={hom} /> */}
-    <Route exact path='/' component={Home} /> 
+    {/* <Route exact path='/' component={Toggle} />  */}
+     <Route exact path='/' component={Home} />  
     {/* <Route exact path='/videos' component={Videos}/>
     <Route exact path='/' component={Navbar} />
     
