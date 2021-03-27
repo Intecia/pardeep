@@ -1,7 +1,7 @@
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import './App.css';
-import Toggle from './pages/sathiart/toggle/Toggle'
- import Home from './pages/sathiart/saatchihome/Home' 
+/* import Toggle from './pages/sathiart/toggle/Toggle' */
+/*  import Home from './pages/sathiart/saatchihome/Home'  */
 import hom from './pages/home/Home'
 
 function App() {

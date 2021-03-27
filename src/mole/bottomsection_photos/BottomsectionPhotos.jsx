@@ -1,19 +1,16 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 /* import wheart from '../../assets/wheart.png'
 import rheart from '../../assets/rheart.png' */
+import action from '../../mole/favourites/Garray'
 import "./bottomsectionphotos.css"
-const BottomsectionPhotos = ({photosAPI,handleClick}) => {
+const BottomsectionPhotos = (props) => {
 
-  console.log("photoAPI",photosAPI);
-  const[image,setImage]=useState('true');
+  console.log("photoAPI",props.photosAPI);
+  const[fav,setFav]=useState(props.fav);
 
   const changeImage=(e)=>{
-     if(e.target.value==='true'){
-      setImage('false');
-    }
-    else{
-      setImage('true') 
-    }   
+     console.log("target==",e.target);   
+     action(e.target.innerText);
   }
 
     return (
@@ -30,14 +27,15 @@ const BottomsectionPhotos = ({photosAPI,handleClick}) => {
 
           <div id="photos">
             <ul className='p-item-group'>
-              {photosAPI.map((item,i) => {
+              {props.photosAPI.map((item,i) => {
+               /*  console.log("item--->",item); */ 
                 return (
                   <li className='p-item-list'>
                     <div  className="img-group" key={item.id}>
                     <img src={item.src.medium} width="230px" height="160px"></img>
                
 
-                     {<div><input type="checkbox" id="heart" value={image} onClick={(e)=>{changeImage(e)}}></input><label for="heart"></label></div>} 
+                     {<div><input type="checkbox" id="heart" value={item.src.medium} onClick={(e)=>{changeImage(e)}}></input><label for="heart"></label></div>} 
                      {/* {image?<div><img src={wheart} key={i} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for="heart"></label></div>:<div><img src={rheart} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for='heart'></label></div>}  */}
 
                     </div>

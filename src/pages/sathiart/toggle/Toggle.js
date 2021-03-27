@@ -1,8 +1,5 @@
-import React, { Fragment,useState} from 'react'
-import img1 from '../../../assets/img1.jpg'
-import img2 from '../../../assets/img2.jpg'
+import React, { Fragment} from 'react'
 import myimages from './Simages'
-import Simages from './Simages'
 import './toggle.css'
 const Toggle=({show,name})=>{
   let master={};

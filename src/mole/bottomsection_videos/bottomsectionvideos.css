@@ -24,9 +24,10 @@
   grid-column-gap: 25px; */
 }
 .v-img-group {
-  /* border: 2px solid black; */
+  /*  border: 2px solid black; */
   position: relative;
 }
+
 #heart {
   position: absolute;
   right: 13px;

@@ -2,19 +2,15 @@ import React,{useState,useEffect} from 'react'
 /* import wheart from '../../assets/wheart.png'
 import rheart from '../../assets/rheart.png' */
 import './bottomsectionvideos.css'
-const BottomsectionVideos = ({videosAPI}) => {
+const BottomsectionVideos = (props) => {
 
-  console.log("videoAPI",videosAPI[0].duration);
-  const[image,setImage]=useState('true');
+  console.log("videoAPI",props.videosAPI);
+  const[fav,setFav]=useState(props.fav);
 
   const changeImage=(e)=>{
-     if(e.target.value==='true'){
-      setImage('false');
-    }
-    else{
-      setImage('true') 
-    }   
-  }
+    console.log("target==",e.target);   
+    setFav([fav,e.target.value]);
+ }
 
     return (
         <section className="bottom-nav">
@@ -22,18 +18,20 @@ const BottomsectionVideos = ({videosAPI}) => {
 
           <div id="videos">
             <ul className='v-item-group'>
-              {videosAPI.map((items,i) => {
-                console.log("link=",items.link);
-                return (<li className='v-item-list'>
+              {props.videosAPI.map((items,i) => {
+               /*  console.log("link=",items.video_files[0].link); */
+                return (<li key={i} className='v-item-list'>
                     <div  className="v-img-group"  key={items.id}>
-                    <video width="230" height="160" controls>
-        <source src={items.link} type="video/mp4"/>
-        <source src={items.link} type="video/ogg"/>
-        Your browser does not support the video tag.
-      </video>
+                      {/* <div>ID:={items.user.id}</div>
+                      <div>name:={items.user.name}</div>
+                      <div>URL:={items.user.url}</div> */}
+                    <video className="vclass" width="230" height="160" controls>
+                      <source src={items.video_files[0].link} type="video/mp4"/>
+                      <source src={items.video_files[0].link} type="video/ogg"/>
+                      Your browser does not support the video tag.
+                    </video>
                      
-                     {<div><input type="checkbox" id="heart" value={image} onClick={(e)=>{changeImage(e)}}></input><label htmlFor="heart"></label></div>} 
-                     {/* {image?<div><img src={wheart} key={i} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for="heart"></label></div>:<div><img src={rheart} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for='heart'></label></div>} */}
+                     {<div><input type="checkbox" id="heart" value={items.video_files[0].link} onClick={(e)=>{changeImage(e)}}></input><label htmlFor="heart"></label></div>} 
                     </div>
                   </li>)}
               )}
