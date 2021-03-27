@@ -8,9 +8,9 @@ function App() {
   return (
 <Router>
   <Switch>
-    {/* <Route exact path='/' component={hom} /> */}
+     <Route exact path='/' component={hom} /> 
     {/* <Route exact path='/' component={Toggle} />  */}
-     <Route exact path='/' component={Home} />  
+      {/* <Route exact path='/' component={Home} / */}>   
     {/* <Route exact path='/videos' component={Videos}/>
     <Route exact path='/' component={Navbar} />
     

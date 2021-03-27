@@ -10,13 +10,17 @@ const [name,setName]=useState('');
     const showToggle=(e)=>{
         let n1=e.target.tagName;
         
-        if(n1==='A'){
+        if(n1==='A' && e.target.innerText!=="Blog"){
             setShow(true);
             setName(e.target.innerText);
         }
         else{
             setShow(false);
         }
+    }
+    const hideToggle=()=>{
+        setShow(false);
+
     }
    /*  const showToggle2=(e)=>{
         let n2=e.target.tagName;
@@ -32,10 +36,10 @@ const [name,setName]=useState('');
                 </div>
 {/* {show?<p>TRUE</p>:<p>FALSE</p>} */}
 
-                <div className="container-sa">
+                <div className="container-sa" onmouseout={hideToggle} >
                     <ul className='nav-item-group'>
                             {navItems.map((item)=>{
-                                return  <li onMouseOver={showToggle} className='nav-link'><a onMouseOver={showToggle} className='nav-item'>{item}</a></li>
+                                return  <li onMouseOver={showToggle}className='nav-link'><a onMouseOver={showToggle} className='nav-item'>{item}</a></li>
                             })}
                     </ul>
                 </div>

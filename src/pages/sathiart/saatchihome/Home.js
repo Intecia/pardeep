@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import Footer from "../../../mole/footer/Footer";
+import Footer from "../sachifooter/Footer";
 import Navbar from "../saatchinavbar/Navbar";
 import axios from "axios";
 import "./Home.css";

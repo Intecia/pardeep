@@ -13,8 +13,9 @@ const Home = () => {
   const [photosAPI, setPhotosAPI] = useState([]);
   const [videosAPI, setVideosAPI] = useState([]);
   const[sendApi,setSendApi]=useState([]);
+  const[loading,setLoading]=useState(false);
   useEffect(() => {
-    axios
+    /* axios
       .get("https://api.pexels.com/v1/search?query=people", {
         headers: {
           Authorization:
@@ -27,8 +28,8 @@ const Home = () => {
       })
       .catch((err) => {
         console.log("photos useEffect Error");
-      });
-
+      }); */
+      setLoading(true);
       axios.get("https://api.pexels.com/videos/search?query=people", {
         headers: {
           Authorization:
@@ -42,12 +43,12 @@ const Home = () => {
       .catch((err) => {
         console.log("video useEffect Error");
       });
-
+setLoading(false);
 
   }, []) 
 
   const handleClick = () => {
-    axios
+   /*  axios
       .get(`https://api.pexels.com/v1/search?query=${name}`, {
         headers: {
           Authorization:
@@ -60,9 +61,9 @@ const Home = () => {
       })
       .catch((err) => {
         console.log("Error");
-      }); 
+      });  */
 
-      axios.get(`https://api.pexels.com/videos/search?query=${name}`, {
+      /* axios.get(`https://api.pexels.com/videos/search?query=${name}`, {
         headers: {
           Authorization:
             "563492ad6f91700001000001eedaff4e65b6494a8fc8b72d7a5b67b7",
@@ -74,7 +75,7 @@ const Home = () => {
       })
       .catch((err) => {
         console.log("On click Error");
-      });  
+      });   */
 
   };
    const photoClick=(e)=>{
@@ -100,7 +101,7 @@ const Home = () => {
     <NavbarBottom photoClick={photoClick}/>
 
      {/* <BottomsectionPhotos photosAPI={photosAPI}/>  */}
-     <BottomsectionVideos videosAPI={videosAPI} /> 
+     <BottomsectionVideos videosAPI={videosAPI} />
    
      {/* {phototvideo}?<BottomsectionVideos prm="calling video sectoin" videosAPI={videosAPI}/>: <BottomsectionPhotos photosAPI={photosAPI}/> */}
     </Fragment>

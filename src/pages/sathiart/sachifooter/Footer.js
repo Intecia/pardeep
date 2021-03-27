@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
-import facebook from '../../assets/facebook.png'
-import instagram from '../../assets/instagram-logo.png'
-import linkedin from '../../assets/linkedin.png'
-import twitter from '../../assets/twitter.png'
-import youtube from '../../assets/youtube.png'
+import facebook from '../../../assets/facebook.png'
+import instagram from '../../../assets/instagram-logo.png'
+import linkedin from '../../../assets/linkedin.png'
+import twitter from '../../../assets/twitter.png'
+import youtube from '../../../assets/youtube.png'
 import './footer.css'
 const Footer = () => {
     const [forBuyers, setBuyers] = useState([
@@ -97,12 +97,12 @@ const Footer = () => {
           <div className='footer-container'>
               <div className='brand'>SAATCHI ART</div>
               <div className='icon'>
-                  <ul className='icon-list'>
-                      <li><img src={facebook} className='icon1'></img></li>
-                      <li><img src={instagram} className='icon1'></img></li>
-                      <li><img src={twitter} className='icon1'></img></li>
-                      <li><img src={linkedin} className='icon1'></img></li>
-                      <li><img src={youtube} className='icon1'></img></li>
+                  <ul className='f-icon-list'>
+                      <li><img src={facebook} className='footer-icon'></img></li>
+                      <li><img src={instagram} className='footer-icon'></img></li>
+                      <li><img src={twitter} className='footer-icon'></img></li>
+                      <li><img src={linkedin} className='footer-icon'></img></li>
+                      <li><img src={youtube} className='footer-icon'></img></li>
                   </ul>
               </div>
           </div>

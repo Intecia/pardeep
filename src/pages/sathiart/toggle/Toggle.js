@@ -27,21 +27,21 @@ console.log(myimages[3]);
    {
     hname:"Drawings",
     img:myimages[2],
-    style:["Fine Art", "Abstract","Modern","Street Art","Pop Art"],
-    subject:["Portrait","Landscape","Still Life","Nature","Beach"],
-    medium:["Oil","Watercolor","Acrylic","Airbrush", "Digital"]
+    style:["Graffiti","Abstract","Fine Art","Pop Art","Surrealism Art"],
+    subject:["Nature","Portrait","Animal","Love","Cartoon"],
+    medium:["Pencil", "Charcoal","Digital","Ink","Pastel"]
   },
  {
     hname:"Sculpture",
     img:myimages[3],
-    style:["O","P","Q","R","S"],
-    subject:["T","U","V","W","X"],
-    medium:["Y","Z","1","2","3"]
+    style:["Pop Art", "Abstract","Wall","Figurative","Modern"],
+    subject:["Body","Still Life","Animal","Architecture","Geometric"],
+    medium:["Metal","Bronze","Clay","Glass","Wood"]
   },
    {
     hname:"Prints",
     img:myimages[4],
-    style:["4","5","6","7","8"],
+    style:["Fine Art","Abstract","Art Deco","Pop Art","Folk Art"],
     subject:["Fine Art2","Portraiture","Abstract","Documentary","Conceptual"],
     medium:["Fine Art3","Portraiture","Abstract","Documentary","Conceptual"]
   },
@@ -55,36 +55,34 @@ console.log(myimages[3]);
    {
     hname:"Blog",
     img:myimages[6],
-    style:["A","B","B","Documentary","Conceptual"],
+    style:["Body","Still Life","Animal","Architecture","Geometric"],
     subject:["b frtrt2","Portraiture","G","Documentary","Conceptual"],
     medium:["Fine Art3","N","Abstract","Documentary","K"]
   },
  {
     hname:"Art Advisory",
     img:myimages[7],
-    style:["AAA","G","Abstract","P","A"],
+    style:["Pop Art", "Abstract","Wall","Figurative","Modern"],
     subject:["mhtyjt2","jytnhture","Abstract","Documentary","Conceptual"],
     medium:["Fine Art3","HH","Abstract","Docsyytary","MM"]
   }]
        const fil= masterarry.filter((head)=>{
-          /* console.log(head.hname);
-          console.log(name); 
-          console.log("head=",head);
-          if(head.hname===name)
-          {
-            console.log("inside if=",head);
-            return ()=>{setMaster(head)};
-          }*/
+        /*  if(head.hname==="Blog")
+         {
+            show=false;
+            return show;
+         } */
            if(head.hname===name)
             return head;
           })
+
           console.log("master=",fil);
           master=fil;
           /* const aro=()=>{setMaster((prev)=>fil)}; */
           console.log("master",master[0].style);
   return (
     <Fragment>
-        <div className='toggle-group'>
+        {show?<div className='toggle-group'>
           <div className="toggle-container">
             <div className="img-div">
           <img src={master[0].img} alt='toggle-Image'className='toggle-img' width='300px' height='300px'/><p className="text-div">Featured Paintings</p></div>
@@ -113,7 +111,7 @@ console.log(myimages[3]);
           </ul>
         </div> 
         </div>
-        </div> 
+        </div>:<div></div> }
     </Fragment>
   )
 }
