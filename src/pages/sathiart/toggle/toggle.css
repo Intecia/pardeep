@@ -3,9 +3,9 @@
   padding: 0;
 }
 .toggle-container {
-  width: 1000px;
+  width: 1200px;
   margin: auto;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   height: 400px;
   display: flex;
   justify-content: space-between;
@@ -19,6 +19,22 @@
 }
 .t-heading {
   margin-bottom: 10px;
-  border: 1px solid blue;
+  /*  border: 1px solid blue; */
   font-weight: bold;
+}
+.toggle-group {
+  box-shadow: 5px 1px 2px 2px rgb(201, 188, 188);
+}
+
+.img-div {
+  position: relative;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+.text-div {
+  position: absolute;
+  margin: auto;
+  top: 30%;
+  left: 20%;
 }

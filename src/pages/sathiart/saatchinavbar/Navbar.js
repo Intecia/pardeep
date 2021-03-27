@@ -6,7 +6,7 @@ const Navbar = () => {
 const [show ,setShow]=useState(false);
 const [name,setName]=useState('');
     
-    const [navItems ,setNavItem]=useState(['Panting','Photography','Drawings','Sculpture','Prints','Features','Blog','Art Advisory'])
+    const [navItems ,setNavItem]=useState(['Painting','Photography','Drawings','Sculpture','Prints','Features','Blog','Art Advisory'])
     const showToggle=(e)=>{
         let n1=e.target.tagName;
         
@@ -42,8 +42,9 @@ const [name,setName]=useState('');
                 <input type="text" placeholder="Enter Text" className='search-box'></input>
                 
             </nav>
-            {show?<div className="toggle"><Toggle show={show} name={name}/></div>:null}
-            <div className='nav-hr-line'></div> 
+            
+            <div className='nav-hr-line'></div>
+            {show?<div className="toggle"><Toggle show={show} name={name}/></div>:null} 
            
         </>
     )
