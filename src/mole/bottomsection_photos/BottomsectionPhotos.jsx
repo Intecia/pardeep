@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 /* import wheart from '../../assets/wheart.png'
 import rheart from '../../assets/rheart.png' */
-import action from '../../mole/favourites/Garray'
 import "./bottomsectionphotos.css"
 const BottomsectionPhotos = (props) => {
 
@@ -10,7 +9,7 @@ const BottomsectionPhotos = (props) => {
 
   const changeImage=(e)=>{
      console.log("target==",e.target);   
-     action(e.target.innerText);
+     
   }
 
     return (
@@ -37,7 +36,6 @@ const BottomsectionPhotos = (props) => {
 
                      {<div><input type="checkbox" id="heart" value={item.src.medium} onClick={(e)=>{changeImage(e)}}></input><label for="heart"></label></div>} 
                      {/* {image?<div><img src={wheart} key={i} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for="heart"></label></div>:<div><img src={rheart} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for='heart'></label></div>}  */}
-
                     </div>
                   </li>
                 );

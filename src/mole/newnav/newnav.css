@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 1000px;
+}
+.navbar2 {
+  margin-top: 10px;
+  border: 2px solid black;
+}
+.container2 {
+  width: 900px;
+  height: 100px;
+  margin: auto;
+  background: rgb(240, 234, 234);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo2 {
+  padding: 10px;
+}
+.search-btn2 {
+  padding: 0 10px;
+  background: rgb(128, 24, 24);
+  color: white;
+  width: 105px;
+  height: 37px;
+  font-size: 20px;
+  margin-top: 4px;
+  border-radius: 3px;
+}
+.input-group {
+  padding: 10px;
+}
+.search-box {
+  height: 43px;
+  border-radius: 3px;
+}
+.dummy {
+  background: blueviolet;
+  height: 200px;
+  width: 500px;
+}
