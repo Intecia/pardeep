@@ -1,27 +1,9 @@
 import React,{Fragment,useState} from 'react'
 import logo from '../../assets/Logo-scroll.png'
 import './newnav.css'
-const NewNav=()=>{
-const [names,setNames]=useState(false);
-
-
- {window.addEventListener('scroll', event => {
-    console.log(window.scrollY); 
- if(window.scrollY===100)
- {
-   console.log("BBBBBBBBBBBBBBBBBB"); 
-   setNames(false)
- }
- else{
-  /* console.log("C"); */
-   setNames(true)
- }
-  /* console.log(window.scrollX) */
-})}
+export const NewNav=()=>{
   return(
     <Fragment>
-     
-    {names?
       <nav className="navbar2">
         <div className='container2'>
         <div>
@@ -32,7 +14,7 @@ const [names,setNames]=useState(false);
               <input type="submit" value="SEARCH" className="search-btn2"/>
               </div>
               </div>
-        </nav>:<div className="dummy"></div>}
+        </nav>
     </Fragment>
   )
 }

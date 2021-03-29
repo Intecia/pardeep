@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { Fragment,useState } from 'react'
+import {NewNav} from '../newnav/NewNav'
 import "./uppersection.css"
 const Uppersection = ({DataJson,name,searchInput,handleClick}) => {
+
+  const [nav,setNav]=useState(true); 
+ window.onscroll = function (e) {
+  
+    if(window.scrollY>100)
+   {
+     console.log("value > 100==",window.scrollY); 
+      setNav(false) 
+   }
+   else if(window.scrollY<100){
+    console.log("value < 100==",window.scrollY); 
+      setNav(true)
+   }
+  };
+
     return (
-        <section className="showcase">
+      <Fragment>
+        {nav?<section className="showcase">
         <div className="container">
           <p className="logo-text">{DataJson.logo}</p>
           <div className="info">
@@ -21,7 +38,8 @@ const Uppersection = ({DataJson,name,searchInput,handleClick}) => {
             </button>
           </div>
         </div>
-      </section>
+      </section>:<NewNav/>}
+      </Fragment>
     )
 }
 

@@ -1,28 +1,25 @@
 import React,{useState} from 'react'
-/* import wheart from '../../assets/wheart.png'
-import rheart from '../../assets/rheart.png' */
+import {OnePhoto} from '../onephoto/OnePhoto'
+import {Link} from 'react-router-dom'
 import "./bottomsectionphotos.css"
 const BottomsectionPhotos = (props) => {
 
   console.log("photoAPI",props.photosAPI);
   const[fav,setFav]=useState(props.fav);
-
-  const changeImage=(e)=>{
+  const[comp,setComp]=useState(false);
+  const[plink,setPlink]=useState('');
+   const changeImage=(e)=>{
      console.log("target==",e.target);   
      
   }
-
+   const clickPhoto=(e)=>{
+    console.log("calling onePhoto",e);
+     setPlink(e);
+      setComp(true);
+  }  
     return (
         <section className="main">
         <div className="container">
-          {/* <div className="heading">
-            <ul className="p-main-heading">
-              <li className='p-heading-list'><a href='#' onClick={handleClick}className="p-heading-link">Photos</a></li>
-              <li className='p-heading-list'><a href='#' onClick={handleClick} className="p-heading-link">Videos</a></li>
-              <li className='p-heading-list'><a href='#' className="p-heading-link">Favourites</a></li>
-            </ul>
-          </div> 
-          <div className="p-hr-line"></div>*/}
 
           <div id="photos">
             <ul className='p-item-group'>
@@ -31,16 +28,17 @@ const BottomsectionPhotos = (props) => {
                 return (
                   <li className='p-item-list'>
                     <div  className="img-group" key={item.id}>
-                    <img src={item.src.medium} width="230px" height="160px"></img>
+                    <img  onClick={()=>clickPhoto(item.src.medium)} src={item.src.medium} width="230px" height="160px" ></img>
                
 
                      {<div><input type="checkbox" id="heart" value={item.src.medium} onClick={(e)=>{changeImage(e)}}></input><label for="heart"></label></div>} 
-                     {/* {image?<div><img src={wheart} key={i} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for="heart"></label></div>:<div><img src={rheart} id="heart" onClick={changeImage} alt="not available" width="22px" height="22px"></img><label for='heart'></label></div>}  */}
                     </div>
                   </li>
+                  
                 );
               })}
             </ul>
+            {comp && <OnePhoto plink={plink}/>}
           </div>
         </div>
       </section>
